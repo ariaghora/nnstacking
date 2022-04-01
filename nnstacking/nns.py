@@ -113,7 +113,7 @@ class NNS(BaseEstimator):
     def __init__(
         self,
         criterion="mse",
-        estimators=None,
+        base_estimators=None,
         ensemble_method="CNNS",
         ensemble_addition=True,
         splitter=10,
@@ -135,7 +135,7 @@ class NNS(BaseEstimator):
         gpu=True,
         verbose=1,
     ):
-        self.estimators = estimators
+        self.estimators = base_estimators
         self.ensemble_method = ensemble_method
         self.ensemble_addition = ensemble_addition
         self.splitter = splitter
